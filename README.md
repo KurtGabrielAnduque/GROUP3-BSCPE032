@@ -53,7 +53,7 @@ It delivers data in **JSON format over HTTP**, enabling simple and efficient int
 ## 🏃‍♂️ Setup & Execution
 
 ### Prerequisites
-Python 3.8+, Apache Kafka, HDFS **OR** MongoDB.
+Python 3.8+, Apache Kafka, MongoDB.
 
 ### Setup
 1. **Setup environment**
