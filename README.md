@@ -1,15 +1,24 @@
-# 🚀 Streaming Data Dashboard: Project Guide
+#  Streaming Data Dashboard:  TIP Air Watch
 
-This project requires building a big data streaming dashboard using **Kafka** and **Streamlit**, featuring separate real-time and historical data views.
+Tip Air Watch is a big data–driven streaming platform designed to monitor daily air quality conditions at the Technological Institute of the Philippines – Quezon City. It serves as a web-based application that applies big data engineering methods and real-time data aggregation to present continuous air quality information. The system collects data from physical sensors and external APIs to display key environmental indicators such as PM2.5, PM10, CO₂ levels, temperature, and other related metrics. It is developed to provide reliable, real-time insights and ensure uninterrupted access to air quality data.
 
 ## 🎯 Architecture & Components
+This application utilizes the following components:
+Pipeline Stack (MongoDB–Kafka–Spark)
 
-A **dual-pipeline** architecture separates live streaming from long-term storage and analysis.
+MongoDB
+A NoSQL, document-based database used for storing large volumes of semi-structured and time-series air quality data. It supports fast queries and aggregation, making it suitable for handling high-frequency streamed data.
 
-| Pipeline | Flow | Output |
-| :--- | :--- | :--- |
-| **Real-time** | Kafka $\rightarrow$ Streamlit (Live Consumer) | `📈 Real-time Streaming View` |
-| **Historical** | Kafka $\rightarrow$ **HDFS OR MongoDB** $\rightarrow$ Streamlit (Query) | `📊 Historical Data View` |
+Kafka
+An event streaming platform that ingests real-time air quality data and organizes it into topics and partitions, enabling parallel processing, scalability, and reliable message delivery through replication and fault tolerance.
+
+Spark
+A distributed analytics engine that performs real-time stream processing using Spark Structured Streaming. It consumes data from Kafka, performs window-based aggregations, and ensures consistent data delivery through checkpointing and fault-tolerant mechanisms.
+
+Data Source:
+API Used – Open-Meteo
+Open-Meteo is a free, open-source weather API that provides accurate hourly weather data using global and mesoscale weather models. It delivers data in JSON format over HTTP, making integration simple and efficient for real-time weather monitoring applications.
+
 
 ### Mandatory Components
 * Kafka Producer/Consumer.
