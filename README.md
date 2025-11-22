@@ -43,11 +43,10 @@ It delivers data in **JSON format over HTTP**, enabling simple and efficient int
 
 ---
 
-### Mandatory Components
-* Kafka Producer/Consumer.
-* **HDFS or MongoDB** integration.
-* Two-page Streamlit dashboard with charts.
-* Robust error handling.
+### Application Features
+* Real-time air quality data streaming
+* Interactive data visualizations
+* Automatic dataset storage and management
 
 ---
 
