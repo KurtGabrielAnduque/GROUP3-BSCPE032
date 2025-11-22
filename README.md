@@ -50,28 +50,6 @@ It delivers data in **JSON format over HTTP**, enabling simple and efficient int
 
 ---
 
-## 💻 Technical Implementation Tasks
-
-### 1. Data Producer (`producer.py`)
-Create a Kafka Producer that fetches real data from an **existing Application Programming Interface (API)** (e.g., a public weather API, stock market API, etc.).
-
-**Required Data Schema Fields:**
-* `timestamp` (ISO format)
-* `value` (Numeric)
-* `metric_type` (String)
-* `sensor_id` (String)
-
-### 2. Dashboard (`app.py`)
-Implement the Streamlit logic:
-* `consume_kafka_data()`: Real-time processing.
-* `query_historical_data()`: Data retrieval from storage.
-* Create interactive widgets (filters, time-range selector) for the Historical View.
-
-### 3. Storage Integration
-Implement data writing and querying for **ONE** of the following: **HDFS** or **MongoDB**.
-
----
-
 ## 🏃‍♂️ Setup & Execution
 
 ### Prerequisites
@@ -105,10 +83,3 @@ Python 3.8+, Apache Kafka, HDFS **OR** MongoDB.
     ```
 
 ---
-
-## 📦 Deliverables
-Submit the following files:
-* `app.py`
-* `producer.py`
-* `requirements.txt`
-* `README.md`
