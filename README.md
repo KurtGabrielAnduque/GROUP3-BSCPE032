@@ -80,6 +80,10 @@ Python 3.8+, Apache Kafka, MongoDB.
     ```bash
     python producer.py
     ```
+3. **Start Consumer:**
+    ```bash
+    python consumer_to_mongo.py
+    ```
 3.  **Launch Dashboard:**
     ```bash
     streamlit run app.py
