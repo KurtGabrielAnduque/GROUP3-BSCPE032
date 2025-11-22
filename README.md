@@ -56,11 +56,14 @@ It delivers data in **JSON format over HTTP**, enabling simple and efficient int
 Python 3.8+, Apache Kafka, MongoDB.
 
 ### Setup
-1. **Setup environment**
+1. **Setup Docker
+    - Install the Docker App
+    - Run the yml file
+2. **Setup environment**
     - Download miniconda
     - Create your python environment
     ```bash
-    conda create -n bigdata python=3.10.13
+    conda create -n bigdata python=3.9.5
     ```
 2.  **Clone Repo & Install:**
     ```bash
